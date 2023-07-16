@@ -23,6 +23,15 @@ public class NodeDeletion {
     *
      * */
 
+    public static ListNode deleteNode(ListNode node, ListNode head){
 
+        /*
+        *   Case empty LinkedList
+        *   Case head
+        *   Case tail
+        *   Case node in the middle
+        *   Case node not found
+        * */
+    }
 
 }
