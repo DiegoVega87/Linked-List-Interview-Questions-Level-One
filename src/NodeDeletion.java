@@ -1,3 +1,9 @@
+
+class ListNode{
+    int val;
+    ListNode next;
+    ListNode(int x){ val = x;}
+}
 public class NodeDeletion {
 
     /*
@@ -16,4 +22,7 @@ public class NodeDeletion {
     *   Output = 1 ->3-> 4 -> 5
     *
      * */
+
+
+
 }
