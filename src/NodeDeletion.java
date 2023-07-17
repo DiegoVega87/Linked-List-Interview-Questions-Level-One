@@ -1,5 +1,7 @@
 import org.w3c.dom.Node;
 
+import java.util.List;
+
 class ListNode{
     int val;
     ListNode next;
@@ -23,6 +25,29 @@ public class NodeDeletion {
     *   Output = 1 ->3-> 4 -> 5
     *
      * */
+
+    public static void main(String[] args){
+
+        ListNode node1 = new ListNode(1);
+        ListNode node2 = new ListNode(2);
+        ListNode node3 = new ListNode(3);
+        ListNode node4 = new ListNode(4);
+        ListNode node5 = new ListNode(5);
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node5;
+        printList(node1);
+        System.out.println();
+        printList(deleteNode(node1, node1));
+        System.out.println();
+        printList(deleteNode(node3, node1));
+        System.out.println();
+        printList(deleteNode(node5, node1));
+
+
+
+    }
 
     public static ListNode deleteNode(ListNode node, ListNode head){
 
@@ -60,4 +85,12 @@ public class NodeDeletion {
         return head;
     }
 
+    public static void printList(ListNode head){
+
+        if(head == null){
+            return;
+        }
+        System.out.print(head.val + "--> ");
+        printList(head.next);
+    }
 }
