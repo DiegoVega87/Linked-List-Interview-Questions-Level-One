@@ -64,8 +64,7 @@ public class NodeDeletion {
         }
 
         if(head.val == node.val){
-           head = head.next;
-           return head;
+           return head.next;
         }
 
         ListNode curr = head;
