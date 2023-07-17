@@ -1,3 +1,4 @@
+import org.w3c.dom.Node;
 
 class ListNode{
     int val;
@@ -26,12 +27,37 @@ public class NodeDeletion {
     public static ListNode deleteNode(ListNode node, ListNode head){
 
         /*
-        *   Case empty LinkedList
+        *   Case empty LinkedList, null node
         *   Case head
-        *   Case tail
         *   Case node in the middle
+        *   Case tail
         *   Case node not found
         * */
+
+        if(node == null || head == null){
+            return head;
+        }
+
+        if(head.val == node.val){
+           head = head.next;
+           return head;
+        }
+
+        ListNode curr = head;
+        ListNode ptr = head.next;
+
+        while(ptr != null){
+
+            if(ptr.val == node.val){
+                curr.next = ptr.next;
+                return head;
+            }
+
+            curr = ptr;
+            ptr = ptr.next;
+        }
+
+        return head;
     }
 
 }
