@@ -19,4 +19,47 @@ public class NodeDeletionII {
     * Explanation: The fifth node from the end is 1. After removing it, the updated linked list becomes 2 -> 3 -> 4 -> 5.
     *
     * */
+
+
+    public static ListNode removeNthFromEnd(ListNode head, int n){
+
+        if(n == 0 || head == null){
+            return head;
+        }
+        ListNode ptr = head;
+        int nodesCount = 0;
+
+        while(ptr != null){
+            nodesCount++;
+            ptr = ptr.next;
+        }
+
+        if(n > nodesCount){
+            return head;
+        }
+        if(n == nodesCount){
+            return head.next;
+        }
+
+
+        nodesCount = nodesCount - n;
+
+        ListNode prev = head;
+        ListNode curr = head.next;
+
+        while(nodesCount  > 1){
+
+            nodesCount--;
+            prev = curr;
+            curr = curr.next;
+
+        }
+
+        prev.next = curr.next;
+
+        return head;
+
+    }
+
+
 }
