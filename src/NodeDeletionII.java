@@ -6,6 +6,17 @@ public class NodeDeletionII {
     * We need a function that takes the head of a linked list and the position of the node to remove from the end,
     * and returns the head of the updated linked list.
     *
+    * Example 1:
+    *   head = 1 -> 2 -> 3 -> 4 -> 5
+    *   n = 2
+    *   Output: 1 -> 2 -> 3 -> 5
+    * Explanation: The second node from the end is 4. After removing it, the updated linked list becomes 1 -> 2 -> 3 -> 5.
+    *
+    * Example 2:
+    *   head = 1 -> 2 -> 3 -> 4 -> 5
+    *   n = 5;
+    *   Output = 2 -> 3 -> 4 -> 5
+    * Explanation: The fifth node from the end is 1. After removing it, the updated linked list becomes 2 -> 3 -> 4 -> 5.
     *
     * */
 }
