@@ -6,5 +6,12 @@ public class LinkedListReversion {
     * of a singly linked list and reverses the list, returning the reversed list. The function should take the head
     * node as input and should be able to handle empty lists.
     *
+    * Example 1:
+    *   Input: 1->2->3->4->5->NULL
+    *   Output: 5->4->3->2->1->NULL
+    *
+    * Example 2:
+    *   Input: NULL
+    *   Input: NULL
     * */
 }
