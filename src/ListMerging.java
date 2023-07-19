@@ -36,24 +36,42 @@ public class ListMerging {
         ListNode l1 = new ListNode(1);
         l1.next = new ListNode(3);
         l1.next.next = new ListNode(5);
+        System.out.println("print l1: " );
+        printList(l1);
+        System.out.println();
 
         ListNode l2 = new ListNode(2);
         l2.next = new ListNode(4);
         l2.next.next = new ListNode(6);
+        System.out.println("print l2: " );
+        printList(l2);
+        System.out.println();
 
         ListNode mergedList = mergeSortedLists(l1, l2);
+        System.out.println("print mergedList: " );
+        printList(mergedList);
+        System.out.println();
 
 
         //Test2
         l1 = new ListNode(1);
         l1.next = new ListNode(2);
         l1.next.next = new ListNode(3);
+        System.out.println("print l1: " );
+        printList(l1);
+        System.out.println();
 
         l2 = new ListNode(4);
         l2.next = new ListNode(5);
         l2.next.next = new ListNode(6);
+        System.out.println("print l2: " );
+        printList(l2);
+        System.out.println();
 
         mergedList = mergeSortedLists(l1, l2);
+        System.out.println("print mergedList: " );
+        printList(mergedList);
+        System.out.println();
 
     }
 
@@ -71,10 +89,9 @@ public class ListMerging {
         ListNode ptr1 = l1;
         ListNode ptr2 = l2;
 
-        while(ptr1 != null || ptr2 != null){
+        while(ptr1 != null && ptr2 != null){
 
-            assert ptr1 != null;
-            if(ptr1.val >= ptr2.val){
+            if(ptr1.val <= ptr2.val){
 
                 if(l3 == null){
                     l3 = ptr1;
@@ -101,9 +118,8 @@ public class ListMerging {
                         tail = tail.next;
                     }
                 }
+                ptr2 = ptr2.next;
             }
-
-            ptr2 = ptr2.next;
         }
 
         while(ptr1 != null){
@@ -118,5 +134,14 @@ public class ListMerging {
         }
 
         return l3;
+    }
+
+    public static void printList(ListNode head){
+
+        if(head == null){
+            return;
+        }
+        System.out.print(head.val + "--> ");
+        printList(head.next);
     }
 }
