@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+
+
 public class LListPalindromeChecker {
 
     /*
@@ -14,4 +17,25 @@ public class LListPalindromeChecker {
     *   Input: 1 -> 2 -> 3 -> 4 -> 5
     *   Output: false
     * */
+
+    public static boolean isPalindrome(ListNode head){
+        if(head == null || head.next == null){
+            return true;
+        }
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+        while(head != null){
+            list.add(head.val);
+            head = head.next;
+        }
+        int size = list.size();
+        for(int i = 0; i < size/2; i++){
+            if(list.get(i) != list.get(size-1-i)){
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
