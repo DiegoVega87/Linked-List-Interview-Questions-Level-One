@@ -95,28 +95,19 @@ public class ListMerging {
 
                 if(l3 == null){
                     l3 = ptr1;
+                    tail = ptr1;
                 }else{
-                    if(tail == null){
-                        tail = ptr1;
-                        l3.next = tail;
-                    }else{
-                        tail.next = ptr1;
-                        tail = tail.next;
-                    }
+                    tail.next = ptr1;
+                    tail = tail.next;
                 }
                 ptr1 = ptr1.next;
             }else{
-
                 if(l3 == null){
                     l3 = ptr2;
+                    tail = ptr2;
                 }else{
-                    if(tail == null){
-                        tail = ptr2;
-                        l3.next = tail;
-                    }else{
-                        tail.next = ptr2;
-                        tail = tail.next;
-                    }
+                    tail.next = ptr2;
+                    tail = tail.next;
                 }
                 ptr2 = ptr2.next;
             }
