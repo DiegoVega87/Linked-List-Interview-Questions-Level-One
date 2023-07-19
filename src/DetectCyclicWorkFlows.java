@@ -8,6 +8,13 @@ public class DetectCyclicWorkFlows {
     * of the cycle. A cycle is present if there is some node in the list that can be revisited by traversing
     * the next pointer.
     *
+    * Example 1:
+    *   head = 1 -> 2 -> 3 -> 4 -> 5 -> 2
+    *   Output = true
     *
+    * Example 2:
+    *   head = 1 -> 2 -> 3 -> 4 -> 5
+    *   Output: false
      * */
+
 }
