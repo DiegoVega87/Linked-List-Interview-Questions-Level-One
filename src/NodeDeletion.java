@@ -1,7 +1,3 @@
-import org.w3c.dom.Node;
-
-import java.util.List;
-
 class ListNode{
     int val;
     ListNode next;

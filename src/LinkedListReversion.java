@@ -1,6 +1,3 @@
-import java.util.List;
-import java.util.regex.Pattern;
-
 public class LinkedListReversion {
 
     /*
